@@ -97,8 +97,8 @@ int main()
 //  printf("r1 = %d\n", R1);
 //  printf("r2 = %d\n", R2);
   //Check if Tree1 and Tree2 are isomorphic
-  if(Isomorphic(R1,R2)) printf("\nYes \n");
-  else printf("\nNo \n");
+  if(Isomorphic(R1,R2)) printf("Yes");
+  else printf("No");
 
   return 0;
 
