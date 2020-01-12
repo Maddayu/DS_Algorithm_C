@@ -1,35 +1,15 @@
-#include <stdio.h>
-#include <stdlib.h>
+already been reported.
+/Users/mac/Documents/GitHub/DS_Algorithm_C/DS_Algorithm_C/DS/week4/Unary_Polynomial_Add_Multiply.cpp:18:17: error: cannot initialize a variable of type 'PolyNomial ' (aka 'PolyNode **') with an rvalue of type 'PtrToNode' (aka 'PolyNode ')
+PolyNomial p = (PtrToNode)malloc(Nsizeof(struct PolyNode));
+^ ~~~~~~~~~~
 
-typedef char ElementType;
-typedef struct TNode *Position;
-typedef Position BinTree;
-struct TNode{
-    ElementType Data;
-    BinTree Left;
-    BinTree Right;
-};
 
-BinTree CreatBinTree(); /* 实现细节忽略 */
-void InorderTraversal( BinTree BT );
-void PreorderTraversal( BinTree BT );
-void PostorderTraversal( BinTree BT );
-void LevelorderTraversal( BinTree BT );
+4 3 4 -5 2 6 1 -2 0
+3 5 20 -7 4 3 1
 
-int main()
-{
-    BinTree BT = CreatBinTree();
-    printf("Inorder:");    InorderTraversal(BT);    printf("\n");
-    printf("Preorder:");   PreorderTraversal(BT);   printf("\n");
-    printf("Postorder:");  PostorderTraversal(BT);  printf("\n");
-    printf("Levelorder:"); LevelorderTraversal(BT); printf("\n");
-    return 0;
-}
-/* 你的代码将被嵌在这里 */
-BinTree CreatBinTree(){
-  return (BinTree)malloc(sizeof(TNode));
-}
-void InorderTraversal( BinTree BT ){};
-void PreorderTraversal( BinTree BT ){};
-void PostorderTraversal( BinTree BT ){};
-void LevelorderTraversal( BinTree BT ){};
+
+15 24 -25 22 30 21 -10 20 -21 8 35 6 -33 5 14 4 -15 3 18 2 -6 1
+5 20 -4 4 -5 2 9 1 -2 0
+
+
+5 20 -4 4 -5 2 9 1 -2 0
