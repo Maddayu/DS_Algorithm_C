@@ -98,9 +98,7 @@ int main(){
        BST r[L+1];          //Create an array of BST with size of L+1 (orginal + to be checked)
        for(int j=0; j<L+1; j++){
          for(int i =0; i < N; i++){
-        //   if(getchar() != '\n'){
            scanf("%d",&InputValue[i]);
-        //   }
          }
          r[j] = BuildBST(InputValue, N);
        }
@@ -108,7 +106,6 @@ int main(){
        for(int j=1; j<L+1; j++){
          NotEqualSign = 0;  //reset NotEqual Inidicator
          NotEqualBSTs(r[0],r[j]);
-         printf("%d\n", NotEqualSign);
          if(NotEqualSign == 0){   //if Not NotEqual, then two BSTs are the same;
            printf("Yes\n");
          }

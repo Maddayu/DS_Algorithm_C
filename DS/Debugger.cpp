@@ -13,3 +13,8 @@ PolyNomial p = (PtrToNode)malloc(Nsizeof(struct PolyNode));
 
 
 5 20 -4 4 -5 2 9 1 -2 0
+
+
+5 5
+50 40 30 20 10
+5 4 3 2 1
