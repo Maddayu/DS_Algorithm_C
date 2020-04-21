@@ -8,7 +8,7 @@
 #define WeightType int
 
 
-
+//Step1
 //-------------------------定义图-------------------------
 typedef struct GNode *PtrToGNode;
 
@@ -16,14 +16,17 @@ struct GNode{
     int Nv;         /*  顶点数 */
     int Ne;         /*  边数  */
 
-    WeightType G[MaxVertexNum][MaxVertexNum];  /*  二维数组存储  */
+    WeightType G[MaxVertexNum][MaxVertexNum];  /*  二维数组存储  实现 邻接矩阵 */
     DataType Data[MaxVertexNum];     /* 存顶点的数据 */
+
 
 }；
 
 typedef PtrToNode MGraph;    /*  以邻接矩阵存储的图类型 */
 //------------------------------------------------------------------------------
 
+
+//Step2
 //-------------------------MGraph 初始化-------------------------
 typedef int Vertex;
 
@@ -46,6 +49,7 @@ MGraph CreateGraph （ int VertexNum ）            /*  初始化一个有Vertex
 //------------------------------------------------------------------------------
 
 
+//Step3
 //-------------------------向 MGraph 中插入边-------------------------
 typedef struct ENode *PtrToENode;
 
@@ -69,6 +73,7 @@ void InsertEdge (MGraph Graph, Edge E)
 //------------------------------------------------------------------------------
 
 
+//Step4
 //-------------------------向 MGraph 中插入边-------------------------
 MGraph BuildGraph()
 {
@@ -97,3 +102,31 @@ MGraph BuildGraph()
       return Graph;
 }
 //------------------------------------------------------------------------------
+
+
+
+//----------------------------简化版---------------------------------------------
+
+int G[MAXN][MAXN], Nv, Ne;
+Void BuildGraph(){
+
+  int i, j, v1, v2, w;
+
+  scanf("%d", &Nv);
+  for(i=0 ; i<Nv; i++){
+    for(j=0; j<Nv; j++){
+      G[i][j]= 0;
+    }
+  }
+
+  scanf("%d", &Ne);
+  for( i=0; i<Ne; i++){
+    scanf("%d %d %d", &v1, &v2, &w){
+      G[v1][v2] = w;
+      G[v2][v1] = w;
+    }
+  }
+}
+
+
+}
